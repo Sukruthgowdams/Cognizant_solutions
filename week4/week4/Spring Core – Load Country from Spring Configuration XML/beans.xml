@@ -1,0 +1,30 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- Country bean with property injection -->
+    <bean id="india" class="com.example.springcore.model.Country">
+        <property name="name" value="India"/>
+        <property name="capital" value="New Delhi"/>
+        <property name="currency" value="INR"/>
+        <property name="population" value="1380000000"/>
+    </bean>
+    
+    <!-- Country bean with constructor injection -->
+    <bean id="usa" class="com.example.springcore.model.Country">
+        <constructor-arg value="United States"/>
+        <constructor-arg value="Washington D.C."/>
+        <constructor-arg value="USD"/>
+        <constructor-arg value="331000000"/>
+    </bean>
+    
+    <!-- Multiple countries -->
+    <bean id="japan" class="com.example.springcore.model.Country">
+        <property name="name" value="Japan"/>
+        <property name="capital" value="Tokyo"/>
+        <property name="currency" value="JPY"/>
+        <property name="population" value="125800000"/>
+    </bean>
+
+</beans>
